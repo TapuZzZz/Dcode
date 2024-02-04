@@ -1,0 +1,47 @@
+<<|| Dcode ||>>
+
+$$ About Us
+Dcode is a code learning website that offers interactive courses and 
+projects for beginners and advanced coders alike. Our platform covers a wide range of 
+programming languages and technologies.
+
+>> Web Development
+Web development course will teach you how to design and 
+build websites. These courses cover topics such as HTML, 
+CSS, JavaScript, and frameworks. The demand for web developers 
+is growing rapidly, as more and more businesses and organizations move their operations online. 
+This makes web development a option for those with the necessary skills.
+versatility, making it a popular choice for programming beginners.
+
+>> Python
+Python courses teach individuals how to write programs using the Python 
+programming language. These courses cover topics such as data types, 
+control structures, functions, object-oriented programming, and various 
+Python libraries and frameworks. Python is known for its simplicity, readability, and 
+versatility, making it a popular choice for programming beginners.
+
+>> Bash
+A Kali Bash course teaches individuals how to use the Kali Linux operating 
+system's command-line interface, Bash, for various security-related tasks 
+such as penetration testing, vulnerability assessments, and digital 
+forensics. These courses cover topics such as Bash scripting, network 
+scanning, exploitation, and post-exploitation techniques.
+
+>> C++
+A C++ course teaches individuals how to write programs using the C++ programming language. 
+These courses cover topics such as data types, control structures, functions, object-oriented 
+programming, and various C++ libraries and frameworks. C++ is widely used in various fields 
+such as game development, systems programming, and scientific computing.
+
+$$ Our Team
+>TapuZ
+>Ugia
+>Lux
+>Baby Jesus
+>Fransuz
+>Gondi
+
+$$ Contact Us
+>Artyomkiselhof2007@gmail.com
+
+Copyright &copy; 2023 by Artyom Kiselhof | All Rights Reserved.

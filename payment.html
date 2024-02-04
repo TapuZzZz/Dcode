@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/payment.css">
+    <link rel="stylesheet" href="./css/tailwind-colors.css">
+    <link rel="icon" type="image/png" href="./img/dcode.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Dcode | Payment</title>
+</head>
+<body>
+    <header class="header">
+        <a href="./loader.html" class="logo">
+            <span style="--i:1">D</span>
+            <span style="--i:2">c</span>
+            <span style="--i:3">o</span>
+            <span style="--i:4">d</span>
+            <span style="--i:5">e</span>
+            <span style="--i:6">;</span>
+    </a>
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-left">
+                    <div class="payment-header">
+                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="payment-header-title">Your Cart</div>
+                        <p class="payment-header-description">Discover the joy of seamless shopping with our user-friendly cart page, where every click brings you closer to your favorite items!</p>
+                    </div>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type"><img src="./img/Dcode.png" alt=""></div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">Your Plan:</div>
+                                    <div class="payment-plan-info-price">Choose</div>
+                                </div>
+                                <a href="#" class="payment-plan-change">Change</a>
+                                <div class="payment-plan-dropdown">
+                                    <label for="payment-plan-select">Select a Plan:</label>
+                                    <select id="payment-plan-select">
+                                        <option value="-">-</option>
+                                        <option value="bash">Bash</option>
+                                        <option value="cpp">C++</option>
+                                        <option value="python">Python</option>
+                                        <option value="web">Web</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Course Price</div>
+                                    <div class="payment-summary-price c1"></div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Discount 10%</div>
+                                    <div class="payment-summary-price c2"></div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Additional Discount Code</div>
+                                    <div class="payment-summary-price c4">
+                                        <input type="text" placeholder="Discount Code" class="discount-code-input" id="discount-code">
+                                        <button class="apply-discount-btn" onclick="applyDiscount()">Apply</button>
+                                    </div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price c3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <form action="" class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+                            <input type="radio" name="payment-method" id="method-1" checked>
+                            <label for="method-1" class="payment-method-item">
+                                <img src="./img/visa.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-2">
+                            <label for="method-2" class="payment-method-item">
+                                <img src="./img/mastercard.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-3">
+                            <label for="method-3" class="payment-method-item">
+                                <img src="./img/paypal.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-4">
+                            <label for="method-4" class="payment-method-item">
+                                <img src="./img/stripe.png" alt="">
+                            </label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="email" placeholder=" " class="payment-form-control" maxlength="30" id="email">
+                            <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control" maxlength="16" pattern="\d{16}" inputmode="numeric" id="card-number">
+                            <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+                        </div>
+                        <div class="payment-form-group-flex">
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" maxlength="4" id="expiry-date">
+                                <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" maxlength="3" id="cvv">
+                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Artyom Kiselhof | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="./loader.html"><img src="./img/Dcode.png"></a>
+        </div>
+    </footer>
+
+    <script src="../js/DarkModeCheck.js"></script>
+    <script src="../js/payment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        /*========== dark light mode ==========*/
+        let darkModeIcon = document.querySelector('#darkMode-icon');
+
+        darkModeIcon.onclick = () => {
+            darkModeIcon.classList.toggle('bx-sun');
+            document.body.classList.toggle('dark-mode');
+
+            // Save the user's choice to localStorage
+            const isDarkMode = document.body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+        };
+
+
+    </script>
+</body>
+</html>

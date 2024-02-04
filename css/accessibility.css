@@ -1,0 +1,98 @@
+.settings-toggler {
+    position: fixed;
+    bottom: 30px;
+    left: 35px;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #4f46e5;
+    z-index: 100;
+    transition: all 0.2s ease;
+}
+
+.settings-toggler span {
+    color: #fff;
+    position: absolute;
+    z-index: 100;
+}
+
+/* Add the following CSS for the expanded settings menu */
+.settings-menu {
+    position: fixed;
+    bottom: 90px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    color: black;
+    z-index: 1001;
+}
+
+.settings-menu.active {
+    display: block;
+}
+
+/* Add styles for the individual settings items if needed */
+.settings-menu-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.settings-menu-item label {
+    display: block;
+    margin-right: 10px; /* Adjust as needed for spacing */
+    font-weight: bold;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-icon {
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 18px;
+    margin: 0 5px;
+    transition: all 0.2s ease;
+}
+
+/* Adjust styles for the input[type="text"] as needed */
+.settings-menu input[type="text"] {
+    width: 50px;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#resetSettings{
+    background: var(--main-color);
+    font-size: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 52px;
+    transition: all 0.2s ease;
+}
+#resetSettings span{
+    color: white;
+    font-size: 20px;
+    margin-top: 2.5px;
+}

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/dcode.png">
+    <title>Dcode - Code Learning Platform</title>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- google icons link --> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bot.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <!-- Bot js -->
+    <script src="./js/bot.js" defer></script>
+</head>
+
+<body>
+
+    <!-- header design -->
+    <header class="header">
+        <a href="loader.html" class="logo">
+            <span style="--i:1">D</span>
+            <span style="--i:2">c</span>
+            <span style="--i:3">o</span>
+            <span style="--i:4">d</span>
+            <span style="--i:5">e</span>
+            <span style="--i:6">;</span>
+    </a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+
+            <a href="./Login.html" id="login">Log In</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <!-- BOT -->
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Chatbot</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <audio id="messageSound" src="./img/notification.mp3"></audio>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br>How can I help you today? <br>Key Words:<br>- <b>account</b> <br>- <b>course</b><br>- <b>price</b><br>- <b>python</b><br>- <b>c++</b> <br>- <b>web</b><br>- <b>bash</b><br>- <b>payment</b></p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>  
+    <!-- Settings -->
+    <button class="settings-toggler" onclick="toggleSettings()">
+        <span class="material-symbols-outlined" id="settingsIcon">settings_accessibility</span>
+        
+    </button>
+    <!-- Settings Menu -->
+    <div class="settings-menu">
+        <div class="settings-menu-item">
+            <label for="fontSize">Font Size:</label>
+            <div class="btn-group">
+                <button id="decreaseFont" class="btn-icon">-</button>
+                <input type="text" id="fontSize" value="10" readonly />
+                <button id="increaseFont" class="btn-icon">+</button>
+            </div>
+        </div>
+
+        <div class="settings-menu-item">
+            <label for="lineHeight">Line Height:</label>
+            <div class="btn-group">
+                <button id="decreaseLineHeight" class="btn-icon">-</button>
+                <input type="text" id="lineHeight" value="1" readonly />
+                <button id="increaseLineHeight" class="btn-icon">+</button>
+            </div>
+        </div>
+
+        <div class="settings-menu-item">
+            <label for="themeColor">Main Color:</label>
+            <input type="color" id="themeColor" value="#754ef9" />
+            <button id="resetSettings">
+                <span class="material-symbols-outlined">
+                    restart_alt
+                    </span>
+            </button>
+        </div>
+    </div>
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, We are</h3>
+            <h1 class="auto-type"></h1>
+            <p>Dcode is a code learning website that offers interactive courses and 
+                projects for beginners and advanced coders alike. Our platform covers a wide range of 
+                programming languages and technologies.</p>
+
+            <div class="social-media">
+                <a href="https://github.com/TapuZzZz"><i class='bx bxl-github'></i></a>
+                <a href="https://twitter.com/DcodeDevs"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/dcode.devs/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://discord.gg/Dcgqr5tE"><i class='bx bxl-discord-alt'></i></a>
+            </div>
+
+            <a href="./app/Dcode Installer.txt" download="Dcode Installer" class="btn">Download Our App;</a> 
+        </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bxl-python'></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bxl-c-plus-plus'></i>
+                    <h3>C++</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bx-bug'></i>
+                    <h3>Bash</h3>
+                </div>
+
+                <div class="circle"></div>
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+        <div class="home-img0">
+            <img src="img/Dcode.png" alt="logo">
+        </div>
+        <div class="home-img-phone">
+            <img src="img/Dcode.png" alt="logo">
+        </div>
+        <div class="home-img2">
+            <img src="img/Dcode.png" alt="logo">
+        </div>
+        <div class="home-img3">
+            <img src="img/Dcode.png" alt="logo">
+        </div>
+        <div class="home-img4">
+            <img src="img/Dcode.png" alt="logo">
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./img/About Us Dcode.png">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Us</span></h2>
+            <h3>Hi, We are Dcode; and we are here to help you create the future!</h3>
+            <p>Dcode is a comprehensive code learning platform designed to empower individuals and 
+                organizations with the knowledge and skills necessary to succeed in today's rapidly 
+                evolving digital landscape. 
+                <span class="read-more-text"> With a user-friendly interface and a vast array of 
+                interactive courses and projects covering everything from front-end web development 
+                to data science, mobile app development, and beyond, Dcode provides a flexible and 
+                engaging learning experience that caters to users of all backgrounds and skill 
+                levels. By combining high-quality educational content with real-world projects, 
+                Dcode enables its users to build a robust portfolio of work that demonstrates their 
+                proficiency in coding and sets them up for success in their careers.</span>
+            </p>
+            <span class="btn read-more-btn">Read More</span>
+        </div>
+    </section>
+
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Web Development</h3>
+                <p>Web development course will teach you how to design and 
+                    build websites. These courses cover topics such as HTML, 
+                    CSS, JavaScript, and frameworks. The demand for web developers 
+                    is growing rapidly, as more and more businesses and organizations move their operations online. 
+                    This makes web development a option for those with the necessary skills.
+                    versatility, making it a popular choice for programming beginners.</p>
+                <div class="button-container">
+                    <button class="btn btn-s" role="button"  onclick="window.location.href = './Course/WebDevelopment.html';">Read More</button>
+                </div>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-python'></i>
+                <h3>Python</h3>
+                <p>Python courses teach individuals how to write programs using the Python 
+                    programming language. These courses cover topics such as data types, 
+                    control structures, functions, object-oriented programming, and various 
+                    Python libraries and frameworks. Python is known for its simplicity, readability, and 
+                    versatility, making it a popular choice for programming beginners.</p>
+                <div class="button-container">
+                    <button class="btn btn-s" role="button"  onclick="window.location.href = './Course/Python.html';">Read More</button>
+                </div>
+            </div>
+            <div class="services-box">
+                <i class="bx bx-bug"></i>
+                <h3>Bash</h3>
+                <p>A Kali Bash course teaches individuals how to use the Kali Linux operating 
+                    system's command-line interface, Bash, for various security-related tasks 
+                    such as penetration testing, vulnerability assessments, and digital 
+                    forensics. These courses cover topics such as Bash scripting, network 
+                    scanning, exploitation, and post-exploitation techniques.</p>
+                <div class="button-container">
+                    <button class="btn btn-s" role="button"  onclick="window.location.href = './Course/Bash.html';">Read More</button>
+                </div>  
+            </div>
+            <div class="services-box">
+                <i class="bx bxl-c-plus-plus"></i>
+                <h3>C++</h3>
+                <p>A C++ course teaches individuals how to write programs using the C++ programming language. 
+                        These courses cover topics such as data types, control structures, functions, object-oriented 
+                        programming, and various C++ libraries and frameworks. C++ is widely used in various fields 
+                        such as game development, systems programming, and scientific computing.</p>
+                <div class="button-container">
+                    <button class="btn btn-s" role="button"  onclick="window.location.href = './Course/Cpp.html';">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team design -->
+    <section>
+        <div class="testimonial-container">
+            <h2 class="heading">Our <span>Team</span></h2>
+    
+            <div class="testimonial-wrapper">
+                <div class="testimonial-box mySwiper">
+                    <div class="testimonial-content swiper-wrapper">
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="./img/Team/TapuZ.jpg" alt="Manager">
+                            <h3>TapuZ</h3>
+                            <p>TapuZ is the manager of Dcode, a company that specializes 
+                                    in offering programming courses to individuals and 
+                                    organizations. With years of experience in the tech 
+                                    industry, TapuZ brings a wealth of knowledge and 
+                                    expertise to his role as manager of Dcode. He is 
+                                    responsible for overseeing the day-to-day operations 
+                                    of the company, including the development and implementation 
+                                    of new course offerings. TapuZ is passionate about helping 
+                                    individuals and organizations develop their technical skills 
+                                    and stay up-to-date with the latest advancements in the 
+                                    industry. Under his leadership, Dcode has become a leading 
+                                    provider of programming courses that cater to a diverse 
+                                    range of skill levels and backgrounds. Overall, TapuZ's 
+                                    dedication to excellence and commitment to advancing the 
+                                    field of programming make him a valuable asset to the 
+                                    Dcode team.</p>
+                    </div>
+    
+                    <div class="testimonial-slide swiper-slide">
+                            <img src="./img/Team/Ugia.jpg" alt="Manager">
+                            <h3>Ugiya</h3>
+                            <p>Ugiya is the manager of Dcode, a company that specializes 
+                                    in offering programming courses to individuals and 
+                                    organizations. With years of experience in the tech 
+                                    industry, Ugiya brings a wealth of knowledge and 
+                                    expertise to his role as manager of Dcode. He is 
+                                    responsible for overseeing the day-to-day operations 
+                                    of the company, including the development and implementation 
+                                    of new course offerings. Ugiya is passionate about helping 
+                                    individuals and organizations develop their technical skills 
+                                    and stay up-to-date with the latest advancements in the 
+                                    industry. Under his leadership, Dcode has become a leading 
+                                    provider of programming courses that cater to a diverse 
+                                    range of skill levels and backgrounds. Overall, Ugiya's 
+                                    dedication to excellence and commitment to advancing the 
+                                    field of programming make him a valuable asset to the 
+                                    Dcode team.</p>
+                    </div>
+    
+                    <div class="testimonial-slide swiper-slide">
+                            <img src="./img/Team/Lux.jpg" alt="Manager">
+                            <h3>Lux</h3>
+                            <p>Lux is  of Dcode, a company that specializes 
+                                    in offering programming courses to individuals and 
+                                    organizations. With years of experience in the tech 
+                                    industry, Lux brings a wealth of knowledge and 
+                                    expertise to his role as manager of Dcode. He is 
+                                    responsible for overseeing the day-to-day operations 
+                                    of the company, including the development and implementation 
+                                    of new course offerings. Lux is passionate about helping 
+                                    individuals and organizations develop their technical skills 
+                                    and stay up-to-date with the latest advancements in the 
+                                    industry. Under his leadership, Dcode has become a leading 
+                                    provider of programming courses that cater to a diverse 
+                                    range of skill levels and backgrounds. Overall, Lux's 
+                                    dedication to excellence and commitment to advancing the 
+                                    field of programming make him a valuable asset to the 
+                                    Dcode team.</p>
+                    </div>
+    
+                    <div class="testimonial-slide swiper-slide">
+                            <img src="./img/Team/Baby Jesus.jpg" alt="Manager">
+                            <h3>Baby Jesus</h3>
+                            <p>Baby Jesus is the manager of Dcode, a company that specializes 
+                                    in offering programming courses to individuals and 
+                                    organizations. With years of experience in the tech 
+                                    industry, Baby Jesus brings a wealth of knowledge and 
+                                    expertise to his role as manager of Dcode. He is 
+                                    responsible for overseeing the day-to-day operations 
+                                    of the company, including the development and implementation 
+                                    of new course offerings. Baby Jesus is passionate about helping 
+                                    individuals and organizations develop their technical skills 
+                                    and stay up-to-date with the latest advancements in the 
+                                    industry. Under his leadership, Dcode has become a leading 
+                                    provider of programming courses that cater to a diverse 
+                                    range of skill levels and backgrounds. Overall, Baby Jesus's 
+                                    dedication to excellence and commitment to advancing the 
+                                    field of programming make him a valuable asset to the 
+                                    Dcode team.</p>
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="./img/Team/Ary.jpg" alt="Manager">
+                        <h3>Fransuz</h3>
+                        <p>Fransuz is the manager of Dcode, a company that specializes 
+                                in offering programming courses to individuals and 
+                                organizations. With years of experience in the tech 
+                                industry, Fransuz brings a wealth of knowledge and 
+                                expertise to his role as manager of Dcode. He is 
+                                responsible for overseeing the day-to-day operations 
+                                of the company, including the development and implementation 
+                                of new course offerings. Fransuz is passionate about helping 
+                                individuals and organizations develop their technical skills 
+                                and stay up-to-date with the latest advancements in the 
+                                industry. Under his leadership, Dcode has become a leading 
+                                provider of programming courses that cater to a diverse 
+                                range of skill levels and backgrounds. Overall, Fransuz's 
+                                dedication to excellence and commitment to advancing the 
+                                field of programming make him a valuable asset to the 
+                                Dcode team.</p>
+                    </div>
+    
+                    <div class="testimonial-slide swiper-slide">
+                            <img src="./img/Team/Gondi.jpg" alt="Manager">
+                            <h3>Gondi</h3>
+                            <p>Gondi is the manager of Dcode, a company that specializes 
+                                    in offering programming courses to individuals and 
+                                    organizations. With years of experience in the tech 
+                                    industry, Gondi brings a wealth of knowledge and 
+                                    expertise to his role as manager of Dcode. He is 
+                                    responsible for overseeing the day-to-day operations 
+                                    of the company, including the development and implementation 
+                                    of new course offerings. Gondi is passionate about helping 
+                                    individuals and organizations develop their technical skills 
+                                    and stay up-to-date with the latest advancements in the 
+                                    industry. Under his leadership, Dcode has become a leading 
+                                    provider of programming courses that cater to a diverse 
+                                    range of skill levels and backgrounds. Overall, Gondi's 
+                                    dedication to excellence and commitment to advancing the 
+                                    field of programming make him a valuable asset to the 
+                                    Dcode team.</p>
+                    </div>
+                    </div>
+    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us!</span></h2>
+        
+        <form action="https://formsubmit.co/artyomkiselhof2007@gmail.com" method="POST"> <!-- artyomkiselhof2007@gmail.com -->
+                <div class="input-box">
+                        <input name="name" type="text" placeholder="Full Name" required>
+                        <input name="email" type="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                        <input name="number" type="number" placeholder="Mobile Number" required="false">
+                        <input name="Subject" type="text" placeholder="Email Subject" required> 
+                </div>
+                <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="your custom message">
+                <input type="hidden" name="_next" value="https://tapuzzzz.github.io/Dcode/thankyou.html">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Artyom Kiselhof | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+    <script src="js/DarkModeCheck.js"></script>
+    <script src="js/accessibility.js"></script>
+    <!-- auto-type js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+            var typed = new Typed(".auto-type", {
+                    strings: ["Dcode;"],
+                    typeSpeed: 380,
+                    loop: false,
+            })
+    </script>
+</body>
+
+</html>
